@@ -20,7 +20,7 @@ const ShortNews = () => {
     const [allNewsData, setAllNewsData] = useState([]);
    const fetchall_Ctegory_data = async () => {
     try {
-        const piadata = await fetch("lioiuhjkih");
+        const piadata = await fetch("https://newsapi.org/v2/top-headlines?country=in&apiKey=2cdb1db1f7ba4a55bbc546cc3e5c72d7");
         const mainData = await piadata.json();
         setAllNewsData(mainData.articles);
     } catch (error) {
