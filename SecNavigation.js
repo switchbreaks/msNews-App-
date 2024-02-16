@@ -5,24 +5,20 @@ import AllNews from "./News/AllNews.js"
 import GameNews from "./News/GameNews.js"
 import IndiaNews from "./News/IndiaNews.js"
 import ScienceNews from "./News/ScienceNews.js";
-
 const FirstRoute = () => (
     <AllNews />
 );
-
 const SecondRoute = () => (
     <ScienceNews />
 );
 const Game = () => (
     <GameNews />
 );
-
 const renderScene = SceneMap({
     first: FirstRoute,
     second: SecondRoute,
     three: Game
 });
-
 export default function SecNavigation() {
     const layout = useWindowDimensions();
 
@@ -32,7 +28,6 @@ export default function SecNavigation() {
         { key: 'second', title: 'Science' },
         { key: 'three', title: 'Game News' },
     ]);
-
     return (
 
         <TabView
